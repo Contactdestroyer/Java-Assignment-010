@@ -10,31 +10,33 @@
   6. All the instance methods for the class **Student**
 
 ```java
-class Student{
-    private String name;
-    private int rollNo;
-   
-    Student(String s, int r)
-    {
-   	    name = s;
-   	    rollNo = r;
-    }
-   
-    void methodForDisplay()
-    {
-        System.out.println(name+"'s Roll No: "+rollNo);
-    }
+class Student/*Class name*/{
+  private String name;/*String instance variable called Name*/
+  private int rollNo;/*Integer instance variable called rollNo*/
 
-    public static void main(String[] args) {
-        Student obj1=new Student("Rambo",21);
-        obj1.methodForDisplay();
-    }
+  Student(String s, int r)/*Student constructor with parameters 's' and 'r'*/
+  {
+    name = s;/*Instance variables are set here through the constructors--*/
+    rollNo = r;/*--parameters. But are assigned actual values when a new object is created.*/
+  }
+
+  void methodForDisplay()/*Instance method of class Student*/
+  {
+    System.out.println(name+"'s Roll No: "+rollNo);
+  }
+
+  public static void main(String[] args) {
+    Student obj1=new Student("Rambo",21);/*New student object created*/
+    obj1.methodForDisplay();
+  }
 }
 ```
 
 ## Part 2 - Public VS Static
 * Read the W3Schools page on class methods: [W3Schools Java Class Methods](https://www.w3schools.com/java/java_class_methods.asp)
 * In your own words, write a few sentences below explaining the difference between static and public methods in relation to a class.
+
+//Static methods are methods whose process will not change when an object is created. So it can be called without the chance of getting different types of results when called multiple times. Public methods have a chance of changing due to instance changes, so an object must be created before the method can be used.
 
 ## Part 3 - Dogs
 * View the image below, and from the image, construct a Java file **Dog** that mirrors the diagrammed class and the 3 dog objects.
